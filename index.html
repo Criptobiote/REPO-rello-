@@ -208,7 +208,7 @@ function tryMovePlayer(dx, dy) {
   if (nx >= 0 && nx < cols && ny >= 0 && ny < rows && maze[ny][nx] === 0) {
     let enemyHere = enemies.find(e => e.x === nx && e.y === ny);
     if (enemyHere && enemyHere.stunnedUntil <= millis()) return;
-    lastMoveDir = {dx, dy}; // Aggiorna direzione ultima
+    lastMoveDir = {dx, dy}; 
     player.x = nx;
     player.y = ny;
     moveCooldown = millis() + 150;
@@ -351,7 +351,7 @@ function drawInstructions() {
   fill(255);
   textAlign(CENTER, CENTER);
   textSize(20);
-  text("\nREPOor \nUse arrow keys to move.\nPress SPACE to shoot (limited shots per level).\nCollect all items and return to base.\nAvoid enemies or stun them with your shots.\n\nPress 'R' to start. \n", width / 2, height / 2);
+  text("\nREPOor \nUse arrow keys to move.\nPress SPACE to shoot (limited shots per level).\nCollect all items and return to base.\nAvoid enemies or stun them with your shots.\n\nPress 'R' to start. \n\n", width / 2, height / 2);
 }
 
 function drawGameOver() {
@@ -360,7 +360,7 @@ function drawGameOver() {
   fill(255, 0, 0);
   textAlign(CENTER, CENTER);
   textSize(32);
-  text("GAME OVER\nPremi 'R' per ricominciare", width / 2, height / 2);
+  text("GAME OVER\nPress 'R' to start again", width / 2, height / 2);
 }
 
 function drawVictory() {
@@ -369,9 +369,9 @@ function drawVictory() {
   fill(0, 200, 0);
   textAlign(CENTER, CENTER);
   textSize(48);
-  text("VITTORIA!", width / 2, height / 2);
+  text("VICTORY!", width / 2, height / 2);
   textSize(20);
-  text("Premi 'R' per ricominciare", width / 2, height / 2 + 50);
+  text("Press 'R' to start again", width / 2, height / 2 + 50);
 }
 </script>
 </body>
