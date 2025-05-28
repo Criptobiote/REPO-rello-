@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>REPO(rello)</title>
+  <title>REPOor</title>
   <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
   <style>
     body {
@@ -179,7 +179,7 @@ function drawBar() {
   fill(255);
   textSize(28);
   textAlign(LEFT, CENTER);
-  text(`🕹️ Lv: ${level}   🎯 Colpi rimasti: ${shotsLeft}   📦 Oggetti raccolti: ${collected}/${level + 2}`, 10, barHeight / 2);
+  text(`🕹️ Lv: ${level}   🎯 Shots Left: ${shotsLeft}   📦 Items Collected: ${collected}/${level + 2}`, 10, barHeight / 2);
 }
 
 function drawPlayer() {
@@ -351,7 +351,7 @@ function drawInstructions() {
   fill(255);
   textAlign(CENTER, CENTER);
   textSize(20);
-  text("Premi le frecce per muoverti.\nPremi SPAZIO per sparare (colpi limitati per livello).\nRaccogli tutti gli oggetti e torna alla base iniziale.\nEvita i nemici o stordiscili con i colpi.\n\nPremi 'R' per iniziare.", width / 2, height / 2);
+  text("REPOor \nUse arrow keys to move.\nPress SPACE to shoot (limited shots per level).\nCollect all items and return to base.\nAvoid enemies or stun them with your shots.\n\nPress 'R' to start.", width / 2, height / 2);
 }
 
 function drawGameOver() {
